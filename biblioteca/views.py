@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import *
 
+
 # Create your views here.
 def index(request):
     Navbar = Navbars.objects.all()
@@ -10,16 +11,20 @@ def index(request):
     return render (request, 'biblioteca/index.html', context)
 
 def libros(request):
+    Libros = Libro.objects.select_related('id_autor').all()
     Navbar = Navbars.objects.all()
     context = {
-        "Navbar": Navbar
+        "Navbar": Navbar,
+        "Libros": Libros,
     }
-    return render (request, 'biblioteca/libros.html', context)
+    return render(request, 'biblioteca/libros.html', context)
 
 def autores(request):
+    Autores = Autor.objects.all()
     Navbar = Navbars.objects.all()
     context = {
-        "Navbar": Navbar
+        "Navbar": Navbar,
+        "Autores" : Autores
     }
     return render (request, 'biblioteca/autores.html', context)
 

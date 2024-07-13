@@ -6,7 +6,7 @@
 }
 
 body{
-    background-color: black;
+    background-color: white ;
 }
 
 /* navbar */
@@ -90,3 +90,21 @@ footer {
     margin: 15px 0;
 }
 
+/* card  */
+.card-img-author {
+    width: 100%;
+    height: auto;
+    max-height: 270px;
+}
+
+/* tabla */
+#tabla-libros {
+    visibility: visible !important;
+    display: table !important;
+    width: 100%;
+    border-collapse: collapse; 
+}
+
+#tabla-libros tbody tr {
+    display: table-row;
+}
