@@ -99,8 +99,6 @@ footer {
 
 /* tabla */
 #tabla-libros {
-    visibility: visible !important;
-    display: table !important;
     width: 100%;
     border-collapse: collapse; 
 }

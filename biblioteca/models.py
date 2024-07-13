@@ -21,3 +21,7 @@ class Autor(models.Model):
     cant_libros = models.IntegerField(blank=False, null=False)
     libro_reconocido = models.CharField(max_length=100, blank=False, null=False)
 
+class Lista_categorias(models.Model):
+    id_categoria = models.AutoField(db_column="id_categoria", primary_key=True)
+    nombre = models.CharField(max_length=100, blank=False, null=False)
+    descripcion = models.CharField(max_length=50, blank=False, null=False)

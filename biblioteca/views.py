@@ -29,8 +29,10 @@ def autores(request):
     return render (request, 'biblioteca/autores.html', context)
 
 def categorias(request):
+    Lista = Lista_categorias.objects.all()
     Navbar = Navbars.objects.all()
     context = {
-        "Navbar": Navbar
+        "Navbar": Navbar,
+        "Lista": Lista
     }
     return render (request, 'biblioteca/categorias.html', context)
